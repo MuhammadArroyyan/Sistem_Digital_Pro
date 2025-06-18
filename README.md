@@ -1,2 +1,3 @@
-# Sistem_Digital_Pro
-Repositori untuk menyimpan semua hal yang berhubungan dengan tugas akhir mata kuliah Sistem Digital
+# DATABASE_URL = https://smart-office-room-default-rtdb.asia-southeast1.firebasedatabase.app/
+
+# API_KEY = AIzaSyABUhatkqnVKHNHgUGLjHlgdjVqrC5oU_M

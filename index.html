@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monitoring Sensor Pintu</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+  <script>
+    // Konfigurasi Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyABUhatkqnVKHNHgUGLjHlgdjVqrC5oU_M",
+      databaseURL: "https://smart-office-room-default-rtdb.asia-southeast1.firebasedatabase.app/"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Smart Office Room</h2>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <div class="data-block">
+              <div class="data" id="temp">Suhu: -- °C</div>
+              <div class="data warning" id="tempWarning">Status suhu akan muncul di sini</div>
+            </div>
+          </td>
+          <td>
+            <div class="data-block">
+              <div class="data" id="dist">Jarak: -- cm</div>
+              <div class="data warning" id="distWarning">Status jarak akan muncul di sini</div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="data-block">
+              <div class="data" id="hum">Kelembapan: -- %</div>
+              <div class="data warning" id="humWarning">Status kelembapan akan muncul di sini</div>
+            </div>
+          </td>
+          <td>
+            <div class="data-block">
+              <div class="data" id="ldr">Cahaya: -- Lux</div>
+              <div class="data warning" id="ldrWarning">Status cahaya akan muncul di sini</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="data" id="btn">Tombol: --</div>
+
+    <div class="button-group">
+      <button onclick="connectSerial()">🔌 Hubungkan Serial</button>
+      <button onclick="sendCommand('LED_ON')">🔴 Nyalakan LED Merah</button>
+      <button onclick="sendCommand('LED_OFF')">⚪ Matikan LED Merah</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,6 +1,19 @@
 let port;
 let reader;
 
+ const firebaseConfig = {
+    apiKey: "AIzaSyCfCdoaZ17R6ZgVLcr1n2LhXDZtJbT1hyo",
+    authDomain: "smart-office-room-de3f8.firebaseapp.com",
+    databaseURL: "https://smart-office-room-de3f8-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "smart-office-room-de3f8",
+    storageBucket: "smart-office-room-de3f8.firebasestorage.app",
+    messagingSenderId: "828186326924",
+    appId: "1:828186326924:web:2e925ed58e68c6f7bc48a9"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
 // Batas minimum
 const MIN_TEMP = 20;
 const MIN_HUM = 30;
